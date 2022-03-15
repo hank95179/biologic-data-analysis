@@ -3,6 +3,8 @@ import turtle
 import random
 import time
 # import hw_function
+def Goto(t,x,y):
+    t.goto(x,y)
 def draw(t1,length,rotation):
     t1.pencolor('red')
     for i in range(4):
@@ -74,23 +76,38 @@ def Spiral(t):
         t.pencolor(random.random(),random.random(),random.random())
         t.circle(2*i+move,45)
 
-def ellipse(t1,rad,seth,sharp):
-    t1.seth(seth)
-    for i in range(2):
-        t1.circle(rad,90)
-        t1.circle(rad//sharp,90)
-
-
-def ToyotaLogo(t,r):
-    ellipse(t,r,-45,3)
+def ellipse(t,a,b,shiftx,shifty):
     t.pu()
-    t.goto(r/1.3,-r/3.8)
-    t.pd()
-    ellipse(t,r/1.4,45,10)
+    Goto(t,a,0+shiftx)
+    for i in range(361):
+        if i == 1:
+            t.pd()
+        x = a*math.cos(math.radians(i))
+        y = b*math.sin(math.radians(i))
+        Goto(t,y+shifty,x+shiftx)
     t.pu()
-    t.goto(r/8,r/2.5)
-    t.pd()
-    ellipse(t,r/1.2,-45,10)
+def spiarl(t):
+    t.pensize(3)
+    t.pu()
+    # Goto(t,r,0)
+    r = 5
+    for i in range(360*5+1):
+        if i == 1:
+            t.pd()
+        x = r*math.cos(math.radians(i))
+        y = r*math.sin(math.radians(i))
+        t.pencolor((x+r)/(2*r),(y+r)/(2*r),i/(360*5+1))
+        Goto(t,y,x)
+        r+=0.05
+    t.pu()
+
+def ToyotaLogo(t):
+    t.pensize(10)
+    ellipse(t,100,180,0,0)
+    Goto(t,0,0)
+    ellipse(t,90,30,0,0)
+    Goto(t,70,0)
+    ellipse(t,30,110,70,0)
 def SineWave(t,s,e,a):
     t.pu()
     for angle in range(s,e):
@@ -109,8 +126,8 @@ t1.reset()
 SineWave(t1,-360,360,180)
 time.sleep(1)
 t1.reset()
-Spiral(t1)
+spiarl(t1)
 time.sleep(1)
 t1.reset()
-ToyotaLogo(t1,300)
+ToyotaLogo(t1)
 turtle.exitonclick()
