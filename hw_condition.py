@@ -46,6 +46,6 @@ def DiceGame():
         print("Banker win!")
     else:print("It is a draw")
 
-# GuessNumber()
-# ClumpDiagnosis()
+ClumpDiagnosis()
+GuessNumber()
 DiceGame()
