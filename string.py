@@ -18,6 +18,19 @@ def ShowFile(fi,n):
 #             str += '\t'
 #     str += '\n'
 #     return str
+def ExtractDEG(fi, fo):
+    fin = open(fi, 'r')
+    fout = open(fo, 'w')
+    line = fin.readline()
+    while(line):
+        if line[0] == '\n':
+            line = fin.readline()
+            a = line.rstrip().split(' ')
+            fout.write(a[1]+'\n')
+        else:
+            line = fin.readline()
+    fin.close()
+    fout.close()
 def SelectAAByCharge(fi, fo, c):
     fin = open(fi, 'r')
     fout = open(fo, 'w')
@@ -27,6 +40,8 @@ def SelectAAByCharge(fi, fo, c):
         a = line.rstrip().split('\t')
         if a[3] == c: fout.write(line)    
         line = fin.readline()
+    fin.close()
+    fout.close()
 def FastaLengthen(fi):
     fin = open(fi, 'r')
     line = fin.readline()
@@ -38,6 +53,7 @@ def FastaLengthen(fi):
             sl += len(line)
         else: print(f'{id}\t{sl}')
         line = fin.readline()
+    fin.close()
 def SimplifyFasta(fin,fput):
     fin = open(fin, 'r')
     fout = open(fput,'w+')
@@ -54,6 +70,8 @@ def SimplifyFasta(fin,fput):
         else: sl += line.rstrip()
         line = fin.readline()
     fout.write('>'+id+'\n'+sl)
+    fin.close()
+    fout.close()
 def RCFasta(fi, fo) :
     original = 'ATCGatcg'
     transform = 'TAGCtagc'
@@ -79,6 +97,8 @@ def RCFasta(fi, fo) :
     
     sl = sl[::-1]
     fout.write('>'+id+'\n'+sl+'\n')
+    fin.close()
+    fout.close()
 def ShowFile1(fin):
     
     fin = open(fin, 'r')    
@@ -87,16 +107,19 @@ def ShowFile1(fin):
         line = line.strip()
         print (line)
         line = fin.readline()
+    fin.close()
 def ShowFile(fin,row):
     fin = open(fin, 'r')
     for i in range(row):
         line = fin.readline()
         print(line)
+    fin.close()
 
 # FindAll('banana','na')
 # ShowFile('text.txt',20)
+# ExtractDEG('GDS4938_deg.txt','output.txt')
 # SelectAAByCharge('text.txt','output.txt','-')
 # FastaLengthen('p53.faa')
-# SimplifyFasta('p53_1.faa','output.txt')
-RCFasta('tdf.fa','output.txt')
+SimplifyFasta('p53_1.faa','output.txt')
+# RCFasta('tdf.fa','output.txt')
 ShowFile1('output.txt')
