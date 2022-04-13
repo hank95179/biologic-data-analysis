@@ -1,0 +1,5 @@
+Student Chinese English Biology Math
+David   88  84  85  83
+John    82  91  82  81
+Mary    80  88  93  78
+Susan   77  94  89  85
