@@ -32,7 +32,7 @@ def MeanGrade(fi,fo):
         avg += float(line[16:18])  
         avg += float(line[20:22])  
         line = line[0:len(line)]
-        fout.write(line[0:22] + "  {0:f}\n".format(avg/4))     
+        fout.write(line[0:22] + "  {0:.2f}\n".format(avg/4))     
         line = fin.readline()
     fin.close()
     fout.close()
@@ -51,6 +51,6 @@ def BWT(s):
 list_a = [9,2,5,1,6,4]
 s = 'ATCCGATCGAGC'
 print(BWT(s))
-# LIS(list_a)
-# MeanGrade("grade.txt","outpu.txt")
-# Fibonacci(10)
+LIS(list_a)
+MeanGrade("grade.txt","outpu.txt")
+Fibonacci(10)

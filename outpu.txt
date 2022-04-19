@@ -1,5 +1,5 @@
-Student Chinese English Biology Math	mean
-David   88  84  85  83  85.000000
-John    82  91  82  81  84.000000
-Mary    80  88  93  78  84.750000
-Susan   77  94  89  85  86.250000
+ Student Chinese English Biology Math	mean
+David   88  84  85  83  85.00
+John    82  91  82  81  84.00
+Mary    80  88  93  78  84.75
+Susan   77  94  89  85  86.25
