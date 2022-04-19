@@ -7,8 +7,7 @@ def  Fibonacci(n):
         else:Flist.append(Flist[i-1]+Flist[i-2])
     print(Flist)
 
-def MeanGrade(fi, fo):
-    a = 0
+
 def LIS(a):
     ans = []
     for i in range(len(list_a)):
