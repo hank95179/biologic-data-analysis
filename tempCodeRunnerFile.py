@@ -1,3 +1,1 @@
-
-MeanGrade("grade.txt","outpu.txt")
-Fibonacci(10)
+,reverse = True
