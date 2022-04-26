@@ -96,7 +96,7 @@ def  MicrornaTarget(fi, fo):
 a = [2,7,5,7,5,7,5]
 ec = Histogram(a)
 # ShowDict(ec)
-# ua = Unique(a)
+ua = Unique(a)
 WordCount("nature_short.txt")
 MicrornaTarget('hsa_MTI.txt', 'output.txt')
-# print(ua)
+print(ua)
