@@ -36,11 +36,13 @@ def WordCount(f):
     #     if e == 'of':
     #         print("Y")
     sorted_count = sorted(ec.items(),key = lambda d:d[1],reverse = True)
-    data_dict = {}
-    for x in sorted_count:
-        data_dict.setdefault(x[0],[]).append(x[1])
-    print(data_dict)
-    return data_dict
+    a = len(sorted_count)
+    # print(a)
+    ans = {}
+    for i in range(a):
+        ans[sorted_count[i][0]] = sorted_count[i][1]
+    print(ans)
+    return ans
 #####
 eng2sp = {'one':'uno','two':'dps'}
 # for eng in eng2sp:
@@ -98,5 +100,5 @@ ec = Histogram(a)
 # ShowDict(ec)
 ua = Unique(a)
 WordCount("nature_short.txt")
-MicrornaTarget('hsa_MTI.txt', 'output.txt')
+# MicrornaTarget('hsa_MTI.txt', 'output.txt')
 print(ua)
