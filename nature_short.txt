@@ -1,0 +1,15 @@
+Backbone of RNA viruses uncovered
+
+The evolutionary history of viruses is largely unknown. Large-scale discovery of
+vertebrate RNA viruses shows that, although viruses often jump between hosts,
+most have co-evolved with their hosts over millions of years.
+
+Many human diseases, from the common cold to deadly haemorrhagic fevers, are
+caused by RNA viruses. Most of these viruses are thought to have originated from
+close relatives that infected mammals, and so the majority of virus-discovery
+studies have focused on mammals and birds. RNA viruses, however, are probably
+older than the last common ancestor oflife on Earth・ Detailed genetic
+information for RNA viruses from other classes of vertebrate is sorely needed if
+we are to fully understand long-term virus evolution. In a paper in Nature, Shi et
+al. report the discovery of previously unidentified vertebrate RNA viruses from
+across evolutionary timescales.
